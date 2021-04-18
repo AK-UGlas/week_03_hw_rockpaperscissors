@@ -43,7 +43,6 @@ class Game():
         return self.player2 
         
 
-
     def _assign_players(self, players):
         # if no second player is present, create a computer player
         # and assign a random choice of weapon

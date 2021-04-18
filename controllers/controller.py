@@ -6,3 +6,7 @@ from models.player import player
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/", methods=["POST"])
+def play_game():
+    print(request.form)
