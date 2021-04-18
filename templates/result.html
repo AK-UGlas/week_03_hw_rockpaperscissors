@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
     {% block content %}
-
+    <div id="result">
         {% if winner == None %}
             <p>Draw! Both players chose {{ weapon }}</p>
         {% else %}
@@ -9,3 +9,4 @@
         {% endif %}
 
     {% endblock %}
+    </div>  

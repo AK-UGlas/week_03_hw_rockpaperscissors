@@ -10,6 +10,10 @@ rps = Game()
 def home():
     return render_template("index.html", title='Welcome')
 
+@app.route("/rules")
+def show_rules():
+    return render_template("rules.html", title='How to Play')
+
 @app.route("/", methods=["POST"])
 def play_game():
     winner = None

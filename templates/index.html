@@ -14,8 +14,8 @@
 
                 <div id="player1">
                     <label for="name-1">Name</label>
-                    <input type="text" name="name-1" id="name-1" placeholder="player1" required>
-                    <select name="weapon-1" id="weapon-1" onchange="changeImg(event)" required>
+                    <input type="text" class="name-in" name="name-1" id="name-1" placeholder="player1" required>
+                    <select class="weapon-select" name="weapon-1" id="weapon-1" onchange="changeImg(event)" required>
                         <option value="" disabled selected> -- Choose Weapon -- </option>
                         <option value="rock"> 🪨 ROCK</option>
                         <option value="paper">📄 PAPER</option>
@@ -25,8 +25,8 @@
 
                 <div id="player2">
                     <label for="name-2">Name</label>
-                    <input type="text" name="name-2" id="name-2" placeholder="player2">
-                    <select name="weapon-2" id="weapon-2">
+                    <input class="name-in" type="text" name="name-2" id="name-2" placeholder="player2">
+                    <select name="weapon-2" id="weapon-2" class="weapon-select">
                         <option value="" disabled selected> -- Choose Weapon -- </option>
                         <option value="rock"> 🪨 ROCK</option>
                         <option value="paper">📄 PAPER</option>
@@ -34,11 +34,11 @@
                     </select>
                 </div>
                 
-                <button type="submit">START BATTLE!</button>
+                <button type="submit" id="start-game">START BATTLE!</button>
             </form>
         </section>
         <section id="weapon-img">
-            <h1>Main Content</h1>
+            <img src="data:" alt>
         </section>
     </section>
     
