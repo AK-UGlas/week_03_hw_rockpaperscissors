@@ -2,6 +2,10 @@
 
     {% block content %}
 
-    <p>{{ winner }} beats {{ loser }} by playing {{ weapon }} </p>
+        {% if winner == None %}
+            <p>Draw! Both players chose {{ weapon }}</p>
+        {% else %}
+            <p>{{ winner.name }} won by playing {{ weapon }} </p>
+        {% endif %}
 
     {% endblock %}

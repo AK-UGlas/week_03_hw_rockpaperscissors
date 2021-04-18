@@ -7,7 +7,7 @@ class Game():
         self.player1 = None
         self.player2 = None
 
-    def play_rpc(self, *args):
+    def play_game(self, *args):
         # play a game of rock paper scissors
         # compare the weapon (gesture) of 2 players and decide the outcome based on the following rules:
         #   Rock beats Scissors
@@ -32,11 +32,11 @@ class Game():
             return
 
         # check all possible winning scenarios for player1
-        if self.player1.gesture == "rock" and self.player2.gesture == "scissors":
+        if self.player1.weapon == "rock" and self.player2.weapon == "scissors":
             return self.player1
-        if self.player1.gesture == "paper" and self.player2.gesture == "rock":
+        if self.player1.weapon == "paper" and self.player2.weapon == "rock":
             return self.player1
-        if self.player1.gesture == "scissors" and self.player2.gesture == "paper":
+        if self.player1.weapon == "scissors" and self.player2.weapon == "paper":
             return self.player1 
 
         # if we make it this far, player2 must have won
@@ -48,9 +48,9 @@ class Game():
         # and assign a random choice of weapon
         self.player1 = players[0]
 
-        if len(args) == 2:
+        if len(players) == 2:
             self.player2 = players[1]
         else:
-            weapon = ["rock", "paper", "scissors"]
-            self.player2 = Player("computer", choice(gestures))
+            weapons = ["rock", "paper", "scissors"]
+            self.player2 = Player("computer", choice(weapons))
             
