@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+    {% block content %}
+    <section id="wrapper">
+        <section id="rules">
+            <h1>Welcome to the Sport of Kings!</h1>
+            
+            <h2>The Rules:</h2>
+            <p>Each player picks their weapon from the 3 available:
+                            Rock, Paper, or Scissors.
+                Each weapon is strong against one, but weak against the remainder of the two.
+                If both players choose the same weapon, it's a tie game.
+
+                If you wish to play against the computer, select 1 from Number of players.
+                Otherwise, choose your weapon, then pass to the second player to choose theirs. <br>
+
+                Press 'START BATTLE!' to begin the game
+            </p>
+        </section>
+        <section id="game-setup">
+            <h1>Create Game</h1>
+            <form action="results.html" method="POST">
+                <label for="players">Number of players</label>
+                <select name="n-players" id="players" onchange="displayPlayer2('player2' , this) ">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                </select>
+
+                <div id="player1">
+                    <label for="name-1">Name</label>
+                    <input type="text" name="name-1" id="name-1" placeholder="player1">
+                    <select name="weapon-1" id="weapon-1" onchange="changeImg(event)">
+                        <option value="" disabled selected>Choose Weapon...</option>
+                        <option value="rock"> 🪨 ROCK</option>
+                        <option value="paper">📄 PAPER</option>
+                        <option value="scissors">✂️ SCISSORS</option>
+                    </select>
+                </div>
+
+                <div id="player2">
+                    <label for="name-2">Name</label>
+                    <input type="text" name="name-2" id="name-2" placeholder="player2">
+                    <select name="weapon-2" id="weapon-2">
+                        <option value="" disabled selected>Choose Weapon...</option>
+                        <option value="rock"> 🪨 ROCK</option>
+                        <option value="paper">📄 PAPER</option>
+                        <option value="scissors">✂️ SCISSORS</option>
+                    </select>
+                </div>
+                
+                <button type="submit">START BATTLE!</button>
+            </form>
+        </section>
+        <section id="weapon-img">
+            <h1>Main Content</h1>
+        </section>
+    </section>
+    
+    <script>
+        function displayPlayer2(id, option) {
+            document.getElementById(id).style.display = option.value == 1 ? 'none' : 'block';
+        }
+        
+        function changeImg(event) {
+        }
+    </script>
+{|% endblock %}

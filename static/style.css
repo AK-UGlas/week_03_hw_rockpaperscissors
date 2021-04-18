@@ -5,14 +5,19 @@
     grid-gap: 2%
 }
 
-#login {
+#rules {
     grid-column: 1;
-    grid-row: 1 / 3;
+    grid-row: 1 / 5;
+}
+
+#game-setup {
+    grid-column: 2;
+    grid-row: 1 / 5;
     background-color: dodgerblue;
     border-radius: 10px;
 }
 
-#login > form {
+#game-setup > form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -20,8 +25,8 @@
 }
 
 #weapon-img {
-    grid-column: 2 / 5;
-    grid-row: 1 / 3;
+    grid-column: 3 / 5;
+    grid-row: 1 / 5;
     background-color: dodgerblue;
     border-radius: 10px;
 }
@@ -46,6 +51,10 @@ body > header > hr {
 
 body > header > h1 {
     color: rgb(120, 120, 145)
+}
+
+#player2 {
+    display: none;
 }
 
 
